@@ -14,19 +14,19 @@ const StatusFilter = () => {
   };
   return (
     <div className={css.filterContainer}>
-      <Button
+      <Button className={css.filterButton}
         selected={filter === statusFilters.all}
         onClick={() => handleFilterChange(statusFilters.all)}
       >
         All
       </Button>
-      <Button
+      <Button className={css.filterButton}
         selected={filter === statusFilters.active}
         onClick={() => handleFilterChange(statusFilters.active)}
       >
         Active
       </Button>
-      <Button
+      <Button className={css.filterButton}
         selected={filter === statusFilters.completed}
         onClick={() => handleFilterChange(statusFilters.completed)}
       >
