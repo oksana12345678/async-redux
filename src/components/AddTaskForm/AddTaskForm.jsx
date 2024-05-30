@@ -1,7 +1,7 @@
 import { Formik, Field, Form } from "formik";
 import Button from "../Button/Button";
 import { useDispatch } from "react-redux";
-import { addTask } from "../../redux/taskSlice";
+import { addTask } from "../../redux/operations";
 import css from "./AddTaskForm.module.css";
 const FormAddTask = () => {
   const dispatch = useDispatch();

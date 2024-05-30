@@ -1,5 +1,4 @@
 import { configureStore } from "@reduxjs/toolkit";
-// import { tasksReducer, filtersReducer } from "./reducers";
 import { tasksReducer } from "./taskSlice";
 import { filtersReducer } from "./filtersSlice";
 

@@ -2,7 +2,7 @@ import { Formik, Field, Form } from "formik";
 import { MdClose } from "react-icons/md";
 import css from "./Task.module.css";
 import { useDispatch } from "react-redux";
-import { deleteTask, toggleCompleted } from "../../redux/taskSlice";
+import { deleteTask, toggleCompleted } from "../../redux/operations";
 
 const Task = ({ task }) => {
   const dispatch = useDispatch();
@@ -10,7 +10,7 @@ const Task = ({ task }) => {
     dispatch(deleteTask(task.id));
   };
   const handleToggle = () => {
-    dispatch(toggleCompleted(task.id));
+    dispatch(toggleCompleted(task));
   };
 
   return (

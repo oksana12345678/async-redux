@@ -4,14 +4,14 @@ import css from "./TaskList.module.css";
 import { statusFilters } from "../../redux/constants";
 import { getTasks, getStatusFilter } from "../../redux/selectors";
 
-const getVisibleTasks = (task, statusFilter) => {
+const getVisibleTasks = (tasks, statusFilter) => {
   switch (statusFilter) {
     case statusFilters.active:
-      return task.filter((task) => !task.completed);
+      return tasks.filter((task) => !task.completed);
     case statusFilters.completed:
-      return task.filter((task) => task.completed);
+      return tasks.filter((task) => task.completed);
     default:
-      return task;
+      return tasks;
   }
 };
 
