@@ -1,7 +1,7 @@
-import Layout from "./components/Layout/Layout";
-import AppBar from "./components/AppBar/AppBar";
-import AddTaskForm from "./components/AddTaskForm/AddTaskForm";
-import TaskList from "./components/TaskList/TaskList";
+import Layout from "./Layout/Layout";
+import AppBar from "./AppBar/AppBar";
+import AddTaskForm from "./AddTaskForm/AddTaskForm";
+import TaskList from "./TaskList/TaskList";
 import { useDispatch, useSelector } from "react-redux";
 import { selectError, selectIsLoading } from "./redux/selectors";
 import { fetchTask } from "./redux/operations";
