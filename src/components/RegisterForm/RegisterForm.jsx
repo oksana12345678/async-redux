@@ -24,17 +24,17 @@ export const RegisterForm = () => {
         <label className={css.label}>
           Username
           <Field type="text" name="name" />
-          <ErrorMessage />
+          <ErrorMessage name="name" component="p" />
         </label>
         <label className={css.label}>
           Email
           <Field type="email" name="email" />
-          <ErrorMessage />
+          <ErrorMessage name="email" component="p" />
         </label>
         <label className={css.label}>
           Password
           <Field type="password" name="password" />
-          <ErrorMessage />
+          <ErrorMessage name="password" component="p" />
         </label>
         <button type="submit">Register</button>
       </Form>
