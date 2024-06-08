@@ -11,6 +11,7 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { tasksReducer } from "./tasks/taskSlice";
+
 import { authReducer } from "./auth/slice";
 
 // Persisting token field from auth slice to localstorage

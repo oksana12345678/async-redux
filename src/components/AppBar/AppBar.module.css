@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+}
+.header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  background-color: rgba(96, 96, 96, 0.57);
+  height: 1px;
+}
+@media screen and (width: 320px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

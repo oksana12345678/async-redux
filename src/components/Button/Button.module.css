@@ -1,12 +1,13 @@
 .btn {
   display: inline-flex;
-  padding: 8px 12px;
   border-radius: 4px;
+  align-items: center;
+  justify-content: center;
   border: none;
   font: inherit;
   cursor: pointer;
-  background-color: #e2e5e8;
-  color: #595959;
+  background-color: #1284f7;
+  color: #feffff;
 }
 
 .btn.isSelected {
@@ -22,4 +23,9 @@
 .btn:active {
   background-color: #1565c0;
   color: #fff;
+}
+@media screen and (width: 320px) {
+  .btn {
+    font-size: 14px;
+  }
 }

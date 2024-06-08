@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const fetchTask = createAsyncThunk(
+export const fetchTasks = createAsyncThunk(
   "tasks/fetchAll",
   async (_, thunkAPI) => {
     try {
@@ -29,19 +29,6 @@ export const deleteTask = createAsyncThunk(
   async (taskId, thunkAPI) => {
     try {
       const response = await axios.delete(`/tasks/${taskId}`);
-      return response.data;
-    } catch (e) {
-      return thunkAPI.rejectWithValue(e.message);
-    }
-  }
-);
-export const toggleCompleted = createAsyncThunk(
-  "tasks/toggleCompleted",
-  async (task, thunkAPI) => {
-    try {
-      const response = await axios.put(`/tasks/${task.id}`, {
-        completed: !task.completed,
-      });
       return response.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);

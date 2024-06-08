@@ -4,9 +4,7 @@ import { useEffect } from "react";
 import { fetchTasks } from "../../redux/tasks/operations";
 import DocumentTitle from "../../components/DocumentTitle";
 import AddTaskForm from "../../components/AddTaskForm/AddTaskForm";
-import StatusFilter from "../../components/StatusFilter/StatusFilter";
-import CountOfTask from "../../components/CountOfTask/CountOfTask";
-import css from "./TasksPage.module.css";
+import TaskList from "../../components/TaskList/TaskList";
 
 const TaskPage = () => {
   const dispatch = useDispatch();
@@ -16,19 +14,9 @@ const TaskPage = () => {
   }, [dispatch]);
   return (
     <>
-      <section className={css.section}>
-        <h2 className={css.title}>Task</h2>
-
-        <CountOfTask />
-      </section>
-      <section className={css.section}>
-        <h2 className={css.title}>Filter By status</h2>
-
-        <StatusFilter />
-      </section>
-
       <DocumentTitle>Your tasks</DocumentTitle>
       <AddTaskForm />
+      <TaskList />
       <div>{isLoading && "Request in progress..."}</div>
     </>
   );

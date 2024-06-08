@@ -6,4 +6,24 @@
 
 .username {
   font-weight: 700;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+.buttonLogOut {
+  width: 70px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  border: none;
+  color: aliceblue;
+  border-radius: 4px;
+  font-weight: 600;
+}
+@media screen and (width: 320px) {
+  .wrapper {
+    justify-content: space-between;
+    width: 100%;
+  }
 }

@@ -1,0 +1,15 @@
+.navigation {
+  display: flex;
+  gap: 16px;
+}
+.link {
+  text-transform: uppercase;
+  font-size: large;
+  font-weight: 700;
+  color: rgb(92, 105, 254);
+  text-decoration: none;
+  transition: color 0.5s;
+}
+.link:hover {
+  color: rgb(1, 1, 203);
+}

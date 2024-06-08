@@ -13,3 +13,5 @@
 .input:focus {
   outline-color: #1976d2;
 }
+@media screen and (width: 320px) {
+}

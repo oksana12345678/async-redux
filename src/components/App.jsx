@@ -1,25 +1,29 @@
 import Layout from "./Layout/Layout";
-import { useDispatch } from "react-redux";
-import { fetchTask } from "../redux/tasks/operations";
+import { useDispatch, useSelector } from "react-redux";
 import { lazy, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { RestrictedRoute } from "./RestrictedRoute";
+import { selectIsRefreshing } from "../redux/auth/selectors";
+import { refreshUser } from "../redux/auth/operations";
 
-const Home = lazy(() => import("../pages/HomePage/HomePage"));
+const HomePage = lazy(() => import("../pages/HomePage/HomePage"));
 const RegisterPage = lazy(() => import("../pages/RegisterPage/RegisterPage"));
 const LoginPage = lazy(() => import("../pages/LoginPage/LoginPage"));
 const TasksPage = lazy(() => import("../pages/TasksPage/TasksPage"));
 
 const App = () => {
   const dispatch = useDispatch();
+  const isRefreshing = useSelector(selectIsRefreshing);
   useEffect(() => {
-    dispatch(fetchTask());
+    dispatch(refreshUser());
   }, [dispatch]);
 
-  return (
+  return isRefreshing ? (
+    <b>Refreshing user...</b>
+  ) : (
     <Layout>
       <Routes>
-        <Route path="/" element={Home} />
+        <Route path="/" element={<HomePage />} />
         <Route
           path="/register"
           element={
