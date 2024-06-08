@@ -43,18 +43,20 @@ const LoginForm = () => {
       onSubmit={handleSubmit}
       initialValues={{ email: "", password: "" }}
     >
-      <Form className={css.form} autoComplete="off">
+      <Form className={css.form} autoComplete="on">
         <label className={css.label}>
           Email
-          <Field type="email" name="email" />
+          <Field className={css.input} type="email" name="email" />
           <ErrorMessage name="email" component="p" />
         </label>
         <label className={css.label}>
           Password
-          <Field type="password" name="password" />
+          <Field className={css.input} type="password" name="password" />
           <ErrorMessage name="password" component="p" />
         </label>
-        <button type="submit">Log In</button>
+        <button className={css.button} type="submit">
+          Log In
+        </button>
       </Form>
     </Formik>
   );

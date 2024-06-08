@@ -1,0 +1,16 @@
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
+}
+.icon {
+  color: rgb(149, 149, 255);
+}
+.desc {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  color: rgb(116, 116, 115);
+}

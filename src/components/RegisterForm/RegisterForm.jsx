@@ -39,20 +39,22 @@ export const RegisterForm = () => {
       <Form className={css.form} autoComplete="off">
         <label className={css.label}>
           Username
-          <Field type="text" name="name" />
+          <Field className={css.input} type="text" name="name" />
           <ErrorMessage name="name" component="p" />
         </label>
         <label className={css.label}>
           Email
-          <Field type="email" name="email" />
+          <Field className={css.input} type="email" name="email" />
           <ErrorMessage name="email" component="p" />
         </label>
         <label className={css.label}>
           Password
-          <Field type="password" name="password" />
+          <Field className={css.input} type="password" name="password" />
           <ErrorMessage name="password" component="p" />
         </label>
-        <button type="submit">Register</button>
+        <button className={css.button} type="submit">
+          Register
+        </button>
       </Form>
     </Formik>
   );
